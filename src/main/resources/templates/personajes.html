@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<title>Loser Nuto</title>
+</head>
+<body>
+<center><h1 th:text = "${titulo}" /><center>
+
+<table >
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>imagen</th>
+				<th>texto</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="personaje: ${personaje}">
+				<td th:text="${personaje.nombre}"></td>
+				<td><img th:src="@{/images/losernuto/}+${personaje.imagen}" width="300" height="150"></td>
+				
+			</tr>
+		</tbody>
+	</table>
+
+
+
+</body>
+</html>
